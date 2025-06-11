@@ -21,13 +21,14 @@ const GameGrid = () => {
   useEffect(() => {
     apiClient
       .get<FetchGamesResponse>("/games")
-      .then((response) => setGames(response.data.results))
+      .then((response) => {
+        setGames(response.data.results)})
       .catch((error) => setError(error.message));
   }, []);
 
   return (
     <>
-      <Text>{error}</Text>
+      { error && <Text>{error}</Text>}
       <ul>
         {games.map((game) => (
           <li key={game.id}>{game.name}</li>

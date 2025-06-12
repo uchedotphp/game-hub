@@ -6,7 +6,7 @@ import {
   HStack,
   Image,
   List,
-  Spinner,
+  //   Spinner,
 } from "@chakra-ui/react";
 
 interface GenreProps {
@@ -14,11 +14,11 @@ interface GenreProps {
   selectedGenre: Genre | null;
 }
 const GenreList = ({ onSelectGenre, selectedGenre }: GenreProps) => {
-  const { data, isLoading, error } = useGenres();
+  const { data } = useGenres();
 
-  if (error) return null;
+  //   if (error) return null;
 
-  if (isLoading) return <Spinner size="xl" />;
+  //   if (isLoading) return <Spinner size="xl" />;
 
   return (
     <>

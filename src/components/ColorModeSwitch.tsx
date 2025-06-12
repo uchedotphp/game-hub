@@ -13,7 +13,7 @@ const ColorModeSwitch = () => {
         <Switch.HiddenInput />
         <Switch.Control />
         <Switch.Label>
-          <Text textTransform="capitalize">{colorMode} Mode</Text>
+          <Text whiteSpace='nowrap' textTransform="capitalize">{colorMode} Mode</Text>
         </Switch.Label>
       </Switch.Root>
     </HStack>

@@ -8,6 +8,6 @@ export default axios.create({
     //     'Content-Type': 'application/json',
     // },
     params: {
-        key: import.meta.env.VITE_API_KEY
+        key: import.meta.env.VITE_API_CODE
     }
 })
